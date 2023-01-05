@@ -14,10 +14,9 @@ public class Main {
 //        System.out.println(nums[nums.length - 1]);
 //        System.out.println(nums.length - 1);
 
-        int val = Collections.max(nums);
-        int idx = nums.indexOf(val) + 1;
+        int idx = nums.indexOf(Collections.max(nums)) + 1;
 
-        System.out.println(val);
+        System.out.println(Collections.max(nums));
         System.out.println(idx);
     }
 }
