@@ -1,0 +1,9 @@
+-- 코드를 입력하세요
+SELECT CART_ID
+FROM CART_PRODUCTS 
+WHERE NAME in ('Milk','Yogurt') and CART_ID
+GROUP BY CART_ID 
+HAVING 
+GROUP_CONCAT(NAME) like '%milk%' and 
+GROUP_CONCAT(NAME) like '%yogurt%'
+ORDER BY CART_ID
