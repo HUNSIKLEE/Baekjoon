@@ -1,28 +1,14 @@
 class Solution {
-
-    int a(int n, int m) {
-        int r;
-        while(m > 0) {
-            r = n % m;
-            n = m;
-            m = r;
-        }
-        return n;
-    }
-    
     public int[] solution(int n, int m) {
-        int[] answer = new int[2];
 
-        if(n < m) {
-            int temp = n;
-            n = m;
-            m = temp;
+        int a = Math.max(n, m);
+        int b = Math.min(n, m);
+        while (b != 0) {
+            int r = a % b;
+            a = b;
+            b = r;
         }
-        
-        answer[0] = a(n, m);
-        
-        answer[1] = n * m / answer[0];
-        
-        return answer;
+ 
+        return new int[] { a, n * m / a };
     }
 }
